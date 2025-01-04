@@ -82,27 +82,12 @@ checkMatch: function(){
                 finish.style.display = "flex"
          }          
     }, 
-    // reinicia o jogo
- restart: function (){
-    let finish = document.getElementById('gameover');
-    finish.style.display = "none"
-    
-    let newcards = this.cards.flatMap(tst => tst);
-        newcards.forEach (card2 => {
-            card2.flipped = false;
-            card2.cardcreate = null;
-            this.allFlip();
-            this.embaralhar();
-            
-        }
-    ) 
-    
-},
+ 
 //vira todas cartas
     allFlip: function(){  
-        const cardtras = document.querySelectorAll('.card');
+        let cardtras = document.querySelectorAll('.card');
         cardtras.forEach(elemento => {
-            elemento.classList.remove('flip');
+            elemento.classList.add('flip');
           });
     },
 
