@@ -8,15 +8,20 @@ const ICON = 'icon'
 stargame();
 
 function stargame(){
+    let tabuleiro = document.getElementById("tabuleiro");
+    tabuleiro.innerHTML = '';
     iniciandocartas(game.cardcreate());
+    let finish = document.getElementById('gameover');
+    finish.style.display = "none";
     console.log(game.cards)
 }
 
 function restartgame(){
-    game.restart();
-    console.log(game.cards)
-    
-    
+    game.restart();   
+}
+function virartodas(){
+    game.allFlip(game.card); 
+    console.log(game.card);  
 }
 
 function iniciandocartas(){
